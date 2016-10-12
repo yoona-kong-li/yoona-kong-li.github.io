@@ -1,0 +1,41 @@
+/*全局样式初始化*/
+* {margin: 0;padding: 0;font-size: 12px}
+ul, li {list-style-type: none}
+a {color: #535353;text-decoration: none}
+a:hover {color: #D40000;text-decoration: none}
+.clear:after {display: table;content: '';clear: both}
+
+/*效果样式*/
+.nav {width: 970px;margin: 0 auto;text-align: center}
+.menu {height: 58px;margin-top: 20px}
+.menu li {background-color: #000;border-bottom: 2px solid #181818;border-top: 2px solid #303030;min-width: 160px}
+.menu>li {display: block;float: left;position: relative}
+.menu>li:first-child {border-radius: 5px 0 0 0}
+.menu>li:last-child {border-radius: 0 5px 0 0}
+.menu li:hover {background-color: #1c1c1c;border-bottom: 2px solid #222222;border-top: 2px solid #1B1B1B}
+.menu a {border-left: 3px solid rgba(0, 0, 0, 0);color: #fff;display: block;font-size: 18px;font-weight: 500;line-height: 54px;padding: 0 25px;text-transform: uppercase}
+.menu li:hover>a {border-radius: 5px 0 0 ;border-left: 3px solid #48A6D6;color: #C4302B}
+
+.op {position: absolute;top: 100%;left: 0;z-index: 0;perspective: 400px}
+.op li {opacity: 0;transform: rotateY(90deg);transition: opacity .4s, transform .5s}
+.menu .op li:hover a {border-left: 3px solid #48A6D6;border-radius: 0;color: #ffffff}
+
+.menu>li:hover .op li, .menu>li:focus .op li {opacity: 1;transform: none}
+
+.menu>li:hover .op li:nth-child(1) {transition-delay: 0s}
+.menu>li:hover .op li:nth-child(2) {transition-delay: 100ms}
+.menu>li:hover .op li:nth-child(3) {transition-delay: 200ms}
+.menu>li:hover .op li:nth-child(4) {transition-delay: 300ms}
+.menu>li:hover .op li:nth-child(5) {transition-delay: 400ms}
+.menu>li:hover .op li:nth-child(6) {transition-delay: 500ms}
+.menu>li:hover .op li:nth-child(7) {transition-delay: 600ms}
+.menu>li:hover .op li:nth-child(8) {transition-delay: 700ms}
+
+.op li:nth-child(1) {transition-delay: 350ms}
+.op li:nth-child(2) {transition-delay: 300ms}
+.op li:nth-child(3) {transition-delay: 250ms}
+.op li:nth-child(4) {transition-delay: 200ms}
+.op li:nth-child(5) {transition-delay: 150ms}
+.op li:nth-child(6) {transition-delay: 100ms}
+.op li:nth-child(7) {transition-delay: 50ms}
+.op li:nth-child(8) {transition-delay: 0s}

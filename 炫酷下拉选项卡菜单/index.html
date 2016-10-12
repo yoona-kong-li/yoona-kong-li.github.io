@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>炫酷下拉选项卡菜单</title>
+	<style>
+		* {font: bold 40px/60px "Microsoft YaHei"}
+		h1 {margin-bottom: 60px;font-size: 54px}
+		#demo1, #demo2 {width: 160px;height: 60px;border: 12px solid #000;border-radius: 20px;background-color: #DAA520;text-align: center;cursor: pointer}
+		#demo1 {float: left}
+		#demo2 {float: right}
+	</style>
+</head>
+<body>
+	<div style="width: 500px;height:200px;margin: 200px auto;text-align: center">
+		<h1>两种下拉选项卡菜单</h1>
+		<div id="demo1">demo1</div>
+		<div id="demo2">demo2</div>
+	</div>
+
+	<script>
+		document.getElementById('demo1').onclick = function () {
+			window.open('demo1.html');
+		}
+		document.getElementById('demo2').onclick = function () {
+			window.open('demo2.html');
+		}
+	</script>
+</body>
+</html>
