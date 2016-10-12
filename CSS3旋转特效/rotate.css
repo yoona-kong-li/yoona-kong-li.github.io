@@ -1,0 +1,44 @@
+body {height:1000px;overflow: auto}
+
+.box_outside {width: 600px;height: 600px;border-radius: 50%;margin: 100px auto;position: relative;animation: a 1000s;-webkit-animation: a 1000s;box-shadow: 0 0 20px 10px #CFB53B}
+/*.green,.black,.pink,.orange {width: 80px;height: 80px;border-radius: 50%;position: absolute;animation: c 1000s;-webkit-animation: c 1000s;box-shadow: 20px 0 0 20px #80F1FE}
+.green {background-color: green;top: -40px;left: 260px}
+.black {background-color: black;top: 260px;left: 560px}
+.pink {background-color: pink;top: 560px;left: 260px}
+.orange {background-color: orange;top: 260px;left: -40px}*/
+.green,.black,.pink,.orange {width: 80px;height: 80px;background: url('images/wheel_2.jpg') no-repeat;border-radius: 50%;position: absolute;animation: c 1000s;-webkit-animation: c 1000s}
+.green {top: -40px;left: 260px}
+.black {top: 260px;left: 560px}
+.pink {top: 560px;left: 260px}
+.orange {top: 260px;left: -40px}
+
+
+.box_inside {width: 300px;height: 300px;position: absolute;top: 150px;left:150px}
+.box_inside .rotate {width: 100%;height: 100%;border-radius: 50%;position: relative;animation: b 1000s;-webkit-animation: b 1000s;box-shadow: 0 0 20px 10px #8E2323}
+/*.red,.yellow,.purple,.brown {width: 0;height: 0;border:40px solid;border-left-color: #C0D9D9;border-right-color: #C0D9D9;border-radius: 50%;position: absolute;animation: d 1000s;-webkit-animation: d 1000s}
+.red {border-top-color: red;border-bottom-color: red;top: -40px;left: 110px}
+.yellow {border-top-color: yellow;border-bottom-color: yellow;top: 110px;left: 260px}
+.purple {border-top-color: purple;border-bottom-color: purple;top: 260px;left: 110px}
+.brown {border-top-color: #5C4033;border-bottom-color: #5C4033;top: 110px;left: -45px}*/
+.red,.yellow,.purple,.brown {width: 80px;height: 80px;background: url('images/wheel_1.jpg') no-repeat;border-radius: 50%;position: absolute;animation: d 1000s;-webkit-animation: d 1000s}
+.red {top: -40px;left: 110px}
+.yellow {top: 110px;left: 260px}
+.purple {top: 260px;left: 110px}
+.brown {top: 110px;left: -45px}
+
+@keyframes a{
+	form{transform: rotate(0deg);-webkit-transform: rotate(0deg)}
+	to{transform: rotate(50000deg);-webkit-transform: rotate(50000deg)}
+}
+@keyframes b{
+	form{transform: rotate(0deg);-webkit-transform: rotate(0deg)}
+	to{transform: rotate(-100000deg);-webkit-transform: rotate(-100000deg)}
+}
+@keyframes c{
+	form{transform: rotate(0deg);-webkit-transform: rotate(0deg)}
+	to{transform: rotate(600000deg);-webkit-transform: rotate(600000deg)}
+}
+@keyframes d{
+	form{transform: rotate(0deg);-webkit-transform: rotate(0deg)}
+	to{transform: rotate(-800000deg);-webkit-transform: rotate(-800000deg)}
+}
