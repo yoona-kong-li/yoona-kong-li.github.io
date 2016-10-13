@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/bootstrap3/css/bootstrap.min.css"/>
+</head>
+<body ng-app>
+    <div ng-controller="cartController" class="container">
+        <table class="table" ng-show="cart.length">
+            <thead>
+                <tr>
+                    <th>产品编号</th>
+                    <th>产品名字</th>
+                    <th>购买数量</th>
+                    <th>产品单价</th>
+                    <th>产品总价</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in cart">
+                    <td>{{item.id}}</td>
+                    <td>{{item.name}}</td>
+                    <td>
+                        <button type="button" ng-click="reduce(item.id)" class="btn btn-primary">-</button>
+                        <input type="text" value="{{item.num}}" ng-model="item.num" >
+                        <button type="button" ng-click="add(item.id)" class="btn btn-primary">+</button>
+                    </td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.price * item.num}}</td>
+                    <td>
+                        <button type="button" ng-click="remove(item.id)" class="btn btn-danger">移除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold">
+                        总购买价
+                    </td>
+                    <td>
+                        {{totalPrice()}}
+                    </td>
+                    <td style="font-weight: bold">
+                        总购买数量
+                    </td>
+                    <td>
+                        {{totalNum()}}
+                    </td>
+                    <td>
+                    	
+                    </td>
+                    <td>
+                        <button type="button" ng-click="cart = {}" class="btn btn-danger">清空</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p ng-show="!cart.length">您的购物车为空</p>
+
+    </div>
+    <script src="js/main.js"></script>
+	<script src="lib/angular/angularjs.js"></script>
+</body>
+</html>
